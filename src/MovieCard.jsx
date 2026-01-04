@@ -35,10 +35,12 @@ function MovieCard() {
 			<img
 				src={movie.Poster}
 				alt={`${movie.Title} (${movie.Year})`}
-				id="movie-poster"
+				className="movie-poster"
 			></img>
-			<h3>{`${movie.Title} (${movie.Year})`}</h3>
-			<p>{movie.Plot}</p>
+			<div className="movie-title">
+				<h3>{`${movie.Title} (${movie.Year})`}</h3>
+			</div>
+			<p className="movie-plot">{movie.Plot}</p>
 		</div>
 	);
 }
