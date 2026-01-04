@@ -4,8 +4,12 @@ function Header() {
 			<h1>Movie Search</h1>
 			<nav>
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
 				</ul>
 			</nav>
 			<hr />
@@ -13,4 +17,4 @@ function Header() {
 	);
 }
 
-export default Header
+export default Header;
