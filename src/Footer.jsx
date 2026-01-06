@@ -1,8 +1,11 @@
 function Footer() {
 	return (
-		<footer>
-			<p> &copy; {new Date().getFullYear()} Movie Search </p>
-		</footer>
+		<>
+			<hr />
+			<footer className="copyright">
+				<p> &copy; {new Date().getFullYear()} Movie Search </p>
+			</footer>
+		</>
 	);
 }
 
