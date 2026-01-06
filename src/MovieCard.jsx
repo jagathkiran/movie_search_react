@@ -1,35 +1,6 @@
-function MovieCard() {
-	const movie = {
-		Title: "Dune",
-		Year: "1984",
-		Rated: "PG-13",
-		Released: "14 Dec 1984",
-		Runtime: "137 min",
-		Genre: "Action, Adventure, Sci-Fi",
-		Director: "David Lynch",
-		Writer: "Frank Herbert, David Lynch",
-		Actors: "Kyle MacLachlan, Virginia Madsen, Francesca Annis",
-		Plot: "A Duke's son leads desert warriors against the galactic emperor and his father's evil nemesis to free their desert world from the emperor's rule.",
-		Language: "English",
-		Country: "United States, Mexico",
-		Awards: "Nominated for 1 Oscar. 2 wins & 7 nominations total",
-		Poster: "https://m.media-amazon.com/images/M/MV5BMGJlMGM3NDAtOWNhMy00MWExLWI2MzEtMDQ0ZDIzZDY5ZmQ2XkEyXkFqcGc@._V1_SX300.jpg",
-		Ratings: [
-			{ Source: "Internet Movie Database", Value: "6.3/10" },
-			{ Source: "Rotten Tomatoes", Value: "36%" },
-			{ Source: "Metacritic", Value: "41/100" },
-		],
-		Metascore: "41",
-		imdbRating: "6.3",
-		imdbVotes: "191,067",
-		imdbID: "tt0087182",
-		Type: "movie",
-		DVD: "N/A",
-		BoxOffice: "$31,439,560",
-		Production: "N/A",
-		Website: "N/A",
-		Response: "True",
-	};
+import PropTypes from "prop-types";
+
+function MovieCard({ movie }) {
 	return (
 		<div className="movie-card">
 			<img
@@ -44,5 +15,40 @@ function MovieCard() {
 		</div>
 	);
 }
+
+MovieCard.propTypes = {
+	movie: PropTypes.shape({
+		Title: PropTypes.string,
+		Year: PropTypes.string,
+		Rated: PropTypes.string,
+		Released: PropTypes.string,
+		Runtime: PropTypes.string,
+		Genre: PropTypes.string,
+		Director: PropTypes.string,
+		Writer: PropTypes.string,
+		Actors: PropTypes.string,
+		Plot: PropTypes.string,
+		Language: PropTypes.string,
+		Country: PropTypes.string,
+		Awards: PropTypes.string,
+		Poster: PropTypes.string,
+		Ratings: PropTypes.arrayOf(
+			PropTypes.shape({
+				Source: PropTypes.string,
+				Value: PropTypes.string,
+			}),
+		),
+		Metascore: PropTypes.string,
+		imdbRating: PropTypes.string,
+		imdbVotes: PropTypes.string,
+		imdbID: PropTypes.string,
+		Type: PropTypes.string,
+		DVD: PropTypes.string,
+		BoxOffice: PropTypes.string,
+		Production: PropTypes.string,
+		Website: PropTypes.string,
+		Response: PropTypes.string,
+	}).isRequired,
+};
 
 export default MovieCard;
