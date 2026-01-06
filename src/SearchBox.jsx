@@ -1,17 +1,10 @@
 import { Search } from "lucide-react";
 function SearchBox() {
 	return (
-		<form className="movie-form">
-			{/* <label for="movie">Enter movie name: </label> */}
-			<input
-				type="text"
-				name="movie"
-				placeholder="Enter movie name"
-				required
-			/>{" "}
-			{/* <br /> */}
+		<form className="movie-search-form">
+			<input type="text" placeholder="Enter movie name" required />
 			<button type="submit">
-				<Search size={10} />
+				<Search size={15} />
 			</button>
 		</form>
 	);

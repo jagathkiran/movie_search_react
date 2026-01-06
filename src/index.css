@@ -1,40 +1,138 @@
+:root {
+	/** Base colors */
+	--clr-dark-a0: #000000;
+	--clr-light-a0: #ffffff;
+
+	/** Theme primary colors */
+	--clr-primary-a0: #c96120;
+	--clr-primary-a10: #d27339;
+	--clr-primary-a20: #db8451;
+	--clr-primary-a30: #e29569;
+	--clr-primary-a40: #e9a781;
+	--clr-primary-a50: #efb899;
+
+	/** Theme surface colors */
+	--clr-surface-a0: #121212;
+	--clr-surface-a10: #282828;
+	--clr-surface-a20: #3f3f3f;
+	--clr-surface-a30: #575757;
+	--clr-surface-a40: #717171;
+	--clr-surface-a50: #8b8b8b;
+
+	/** Theme tonal surface colors */
+	--clr-surface-tonal-a0: #231a15;
+	--clr-surface-tonal-a10: #382f2a;
+	--clr-surface-tonal-a20: #4e4541;
+	--clr-surface-tonal-a30: #655d59;
+	--clr-surface-tonal-a40: #7d7672;
+	--clr-surface-tonal-a50: #95908d;
+
+	/** Success colors */
+	--clr-success-a0: #22946e;
+	--clr-success-a10: #47d5a6;
+	--clr-success-a20: #9ae8ce;
+
+	/** Warning colors */
+	--clr-warning-a0: #a87a2a;
+	--clr-warning-a10: #d7ac61;
+	--clr-warning-a20: #ecd7b2;
+
+	/** Danger colors */
+	--clr-danger-a0: #9c2121;
+	--clr-danger-a10: #d94a4a;
+	--clr-danger-a20: #eb9e9e;
+
+	/** Info colors */
+	--clr-info-a0: #21498a;
+	--clr-info-a10: #4077d1;
+	--clr-info-a20: #92b2e5;
+}
+
+body {
+	background-color: var(--clr-surface-a0);
+	color: var(--clr-light-a0);
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 10px;
+	min-height: 1;
+	overflow: hidden;
+}
+
+hr {
+	border: none;
+	border-top: 2px solid var(--clr-primary-a0);
+	margin: 10px 0;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.header h1 {
+	margin: 0;
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: var(--clr-primary-a0);
+}
+
+.movie-search-form {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	max-width: 250px;
+	display: flex;
+	gap: 0;
+}
+
+.movie-search-form input {
+	background-color: var(--clr-primary-a50);
+	padding: 15px 0 15px 15px;
+	border-radius: 10px 0px 0px 10px;
+	border: none;
+}
+
+.movie-search-form button {
+	background-color: var(--clr-primary-a0);
+	padding: 15px;
+	border-radius: 0px 10px 10px 0px;
+	border: none;
+}
+
 .movie-card {
-	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: var(--clr-surface-a10);
+	border: 1px solid var(--clr-surface-a30);
 	border-radius: 10px;
-	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 	padding: 20px;
 	margin: 10px;
 	text-align: center;
 	max-width: 250px;
 	display: inline-block;
+	color: var(--clr-light-a0);
 }
 
 .movie-card .movie-poster {
 	max-width: 100%;
 	height: auto;
 	margin-bottom: 10px;
+	border: 1px solid var(--clr-dark-a0);
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .movie-card .movie-title {
-	font-family: Arial, Helvetica, sans-serif;
-	margin: 0;
-	color: rgba(0, 0, 0, 1);
+	margin: 0.5rem 0;
+	font-weight: bold;
+	color: var(--clr-primary-a10);
 	text-overflow: ellipsis;
 }
 
 .movie-card .movie-plot {
 	font-family: Arial, Helvetica, sans-serif;
-	color: rgba(0, 0, 0, 1);
+	color: var(--clr-surface-a50);
+	font-size: 14px;
 	text-align: justify;
-}
-
-.movie-form {
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	border-radius: 10px;
-	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-	padding: 20px;
-	margin: 10px;
-	text-align: center;
-	max-width: 250px;
-	display: block;
 }
