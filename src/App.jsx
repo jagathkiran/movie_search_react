@@ -70,11 +70,11 @@ const movies = [
 
 function App() {
 	return (
-		<>
+		<div className="app-container">
 			<Header></Header>
 			<MovieList items={movies} searchItem={userInput}></MovieList>
 			<Footer></Footer>
-		</>
+		</div>
 	);
 }
 

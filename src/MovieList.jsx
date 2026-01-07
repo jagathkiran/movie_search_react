@@ -9,13 +9,13 @@ function MovieList({ items, searchItem }) {
 		);
 	} else if (items.length === 0) {
 		return (
-			<div>
+			<div className="movie-list">
 				<p>No movie found with name {searchItem}</p>
 			</div>
 		);
 	} else {
 		return (
-			<div>
+			<div className="movie-list">
 				{items.map((movie) => (
 					<MovieCard key={movie.imdbID} movie={movie}></MovieCard>
 				))}
