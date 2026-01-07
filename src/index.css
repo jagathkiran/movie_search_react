@@ -94,11 +94,23 @@ hr {
 	border: none;
 }
 
+.movie-search-form input:focus {
+	outline: none;
+}
+
 .movie-search-form button {
 	background-color: var(--clr-primary-a0);
 	padding: 15px;
 	border-radius: 0px 10px 10px 0px;
 	border: none;
+}
+
+.movie-search-form button:focus {
+	outline: none;
+}
+
+.movie-list {
+	flex: 1;
 }
 
 .movie-card {

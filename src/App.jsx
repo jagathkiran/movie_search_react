@@ -2,6 +2,7 @@ import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import MovieList from "./MovieList.jsx";
 
+const userInput = "Dune";
 const movies = [
 	{
 		Title: "Dune",
@@ -71,7 +72,7 @@ function App() {
 	return (
 		<>
 			<Header></Header>
-			<MovieList items={movies}></MovieList>
+			<MovieList items={movies} searchItem={userInput}></MovieList>
 			<Footer></Footer>
 		</>
 	);
